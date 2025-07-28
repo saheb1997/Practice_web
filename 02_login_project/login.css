@@ -1,0 +1,64 @@
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+body {
+  background-color: aliceblue;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  display: flex;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background-color: #4b9fd6;
+  border-radius: 8px;
+  padding: 30px;
+  width: 600px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.First_Last_name {
+  display: flex;
+  gap: 10px;
+}
+.First_Last_name input {
+  width: 600px;
+}
+
+#password {
+  width: 580px;
+  /* margin-top: 10px; */
+}
+button{
+  background-color: #5eeb4b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+}
