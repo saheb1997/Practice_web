@@ -66,10 +66,115 @@ class car extends Vehicle{
 }
 
 let mycar = new car("Toyota", "corolla")
-console.log(mycar.start());
-console.log(mycar.drive());
+// console.log(mycar.start());
+// console.log(mycar.drive());
 
 
+
+
+
+
+
+let vehone = new Vehicle("BMW", "X5");
+// console.log(vehone.start());
+
+
+
+// Encapsulation
+
+class BankAccount {
+    #balance = 0;
+    
+    deposite(amount) {
+        this.#balance += amount;
+        return this.#balance;
+    }
+    getBalance(){
+        return `$${this.#balance}`;
+    }
+
+}
+
+let account = new BankAccount()
+// console.log(account.getBalance());
+ 
+
+// Abstraction 
+class coffemachine{
+    start() {
+        return `stratign the machine...`;
+    }
+    brewcoffe() {
+        return `Brewing coffe`;
+    }
+    pressStartButton() {
+        const start = this.start();
+        const brewcoffe = this.brewcoffe();
+        return ` ${start}  ${brewcoffe}`;
+        
+    }
+}
+
+let mymachine = new coffemachine();
+// console.log(mymachine.pressStartButton())
+
+
+
+
+// polymorphism
+class Bird {
+    fly()
+    {
+        return `Flying....`;
+        }
+}
+
+class Penguin extends Bird{
+    fly() {
+        return `penguins can't fly`;
+    }
+}
+
+let bird = new Bird();
+let penguin = new Penguin();
+// console.log(penguin.fly());
+
+
+
+
+class Calculator {
+    static add(a, b) {
+        return a + b;
+    }
+}
+
+// let minicalc = new Calculator();
+// console.log(Calculator.add(2, 3));
+
+
+// getter and setter
+class Employee{
+    constructor(name, salary) {
+        this.name = name;
+        this._salary = salary;
+
+    }
+    get salary() {
+        return `you are not allowed to see the salary`;
+    }
+    set salary(value) {
+        if (value < 0)
+        {
+            console.error("Invalid salary");
+        }
+        else {
+            this._salary = value;
+        }
+    }
+}
+
+let emp = new Employee("Allice", 50000);
+console.log(emp._salary)
 
 
 
