@@ -11,7 +11,7 @@ let hold = document.getElementById('changeTextButton').
 // console.log(hold);
 
 
-// exmple2
+//  <!-- Example 2: Traversing the Dom  and change the color of slected-->
 document
     .getElementById("hightlightFirstCity")
     .addEventListener("click", function () {
@@ -49,6 +49,56 @@ document.getElementById("removeLastTask").addEventListener('click',
     }
 )
 
+//Example 6
+
+document.getElementById("cilickMeButton").addEventListener('click',
+    function(){
+        alert("chai code");
+    }
+)
+
+// Example 7:Event Delegation
+document.getElementById("teaList").addEventListener('click',
+    function (event) {
+        if (event.target && event.target.matches('.teaItem')) {
+            alert(`you slected : ${event.target.textContent}`);
+
+        }
+        
+    }
+)
+
+// example 8
+document.getElementById("feedbackForm").addEventListener('submit',
+    function (event) {
+        event.preventDefault()
+        let feedback = document.getElementById("feedbackInput").value;
+        console.log(feedback.value);
+        document.getElementById("feedbackDisplay").textContent=
+        `Feedback is : ${feedback}`
+        
+    }
+
+)
+
+//example 9
+document.addEventListener('DOMContentLoaded',
+    function(){
+        document.getElementById('domStatus').textContent = 
+        "Dom fully loaded";
+    }
+)
+
+//example 10
+
+document.getElementById('toggleHighlight').addEventListener('click',
+    function(){
+        let descriptionText =document.getElementById('descriptionText');
+        // descriptionText.classList.add('hightlight');
+        descriptionText.classList.toggle ('hightlight');
+
+    }
+)
  
 
  
