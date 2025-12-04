@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after puseudo selector</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            
+        }
+        header::before{
+           background: url("https://images.unsplash.com/photo-1458571037713-913d8b481dc6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1920") no-repeat center center/cover;
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           z-index: -1;
+
+           opacity: 0.5;
+
+        }
+        .navigation{
+            display: flex;
+            font-size: 20px 23px;
+            font-family: "Sofia", sans-serif;
+        }
+        .navigation a{
+        color: #ffffff;           
+        text-decoration: none;
+        }
+        .navigation a:hover{
+            background-color: rgb(124, 100, 70);
+        }
+        li{
+            list-style: none;
+            padding: 34px 23px;
+
+        }
+        section{
+            height: 344px;
+            margin: 3px 23px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border: 2px solid red; */
+            justify-content: center;
+        }
+        
+        h1{
+            font-size: 4rem;
+        }
+        .navigation :last-child{
+            margin-left: auto;
+        }
+
+        .navigation .login-btn{
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+               <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Prodction</a></li>
+                <li><a href="#">About us</a></li>
+                <li><button class="login-btn">Login</button> </li>
+            </ul>
+        </nav>
+
+          
+    </header>
+        <section>
+            <h1>Wlecome to coding world</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime expedita quisquam nemo sapiente provident ratione odio ipsum dolor voluptatem, vitae, facere distinctio inventore debitis cupiditate eius. Quibusdam quo id ut.
+            </p>
+        </section>
+
+</body>
+</html>
