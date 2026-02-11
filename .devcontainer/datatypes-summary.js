@@ -39,3 +39,31 @@ const myFunction = function (params) {
 console.table([typeof bigNumber,typeof heros,typeof myobj])
 
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// stack (primitive) , heap (Non-primitive)
+
+//  This is primitive here we get the coppy so one is changed the other will not changed
+let myYoutubename = "saheb sarkar"
+let anothername = myYoutubename
+
+
+anothername = "sandip sarkar"
+
+console.log(anothername);
+console.log(myYoutubename);
+
+
+
+//  non primitive here we get the reference so if one changed then other will also changed
+let user1 = {
+    usertEmail: "sahebs450@gmail.com",
+    upi :"abc" 
+}
+
+let user2 =user1;
+
+user2.usertEmail= "user@gmail.com"
+
+console.log(user1);
+console.log(user2)
+
