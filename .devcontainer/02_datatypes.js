@@ -20,3 +20,4 @@ let isloggedIN = false
 console.log(typeof age)
 console.log(typeof undefined)//undefined
 console.log(typeof null)//object
+
