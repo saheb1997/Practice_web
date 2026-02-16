@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      .bg-black {
+        background: #000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div class="bg-black">
+      <h1 id="title" class="heading">
+        DOM learning on Chai aur code
+        <span style="display: none"> test text</span>
+      </h1>
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <h2>Lorem, ipsum dolor.</h2>
+      <h3>Lorem, ipsum.</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  </body>
+</html>
+<!-- 
+innerHTML
+document.getElementById("title").innerHTML = "New Title";
+innertext
+document.getElementById("title").innerText = "New Title";
+textContent
+document.getElementById("title").textContent = "New Title";
+
+difference between innerText and textContent
+innerText will return the visible text content of a node, while textContent will return the full text content of a node, including hidden text. innerText is affected by CSS styles, while textContent is not. innerText will trigger a reflow to compute the visible text, while textContent will not. innerText is not supported in all browsers, while textContent is widely supported.
+
+
+innerHTML will return the HTML content of a node, while innerText and textContent will return the text content of a node. innerHTML can be used to set the HTML content of a node, while innerText and textContent can only be used to set the text content of a node. innerHTML can be used to create new elements and add them to the DOM, while innerText and textContent cannot. innerHTML can be used to execute scripts, while innerText and textContent cannot.
+
+document.querySelectorAll("h1") will return a NodeList of all the h1 elements in the document. You can then use a loop to iterate through the NodeList and access each h1 element individually. For example:
+const h1Elements = document.querySelectorAll("h1");
+h1Elements.forEach((h1) => {
+  console.log(h1.innerText);
+});
+
+
+
+document.querySelector("h1") will return the first h1 element in the document. You can then access the properties and methods of that element directly. For example:
+const firstH1 = document.querySelector("h1");
+console.log(firstH1.innerText); 
+
+if want nth h1 element then you can use document.querySelectorAll("h1")[n-1] to access the nth h1 element. For example, to access the 2nd h1 element:
+const secondH1 = document.querySelectorAll("h1")[1];
+console.log(secondH1.innerText);
+
+--!
