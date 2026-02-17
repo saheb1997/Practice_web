@@ -1,0 +1,74 @@
+/* Reset default margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Main container */
+.canvas {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Color buttons */
+.button {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+/* Hover effect */
+.button:hover {
+  transform: scale(1.1);
+  border: 3px solid #333;
+}
+
+/* Individual colors */
+#grey {
+  background-color: grey;
+}
+
+#white {
+  background-color: white;
+  border: 2px solid black;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+#purple{
+    background-color: purple;
+}
+/* Instruction text */
+h2 {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+h2 span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}

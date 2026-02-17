@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <div class="parrent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parrent"); //for write the class for querySelector we have to write "." before the class name
+    // console.log(parent);
+    // console.log(parent.children);
+    // for (let id = 0; id < parent.children.length; id++) {
+    //   console.log(parent.children[id].innerHTML);
+    // }
+    parent.children[1].style.color = "orange";
+    // console.log(parent.firstElementChild.innerHTML);
+    // console.log(parent.lastElementChild.innerHTML);
+
+    const dayone = document.querySelector(".day");
+    // console.log(dayone.parentElement.innerHTML);
+    console.log("Nodes:", parent.childNodes);
+    // console.log(parent.children [0].innerText);
+  </script>
+</html>
