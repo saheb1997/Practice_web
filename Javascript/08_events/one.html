@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img width="200px" id="computer" src="computer.jpg" alt="photoshop" />
+        </li>
+        <li><img width="200px" id="owl" src="owl.jpg" alt="" /></li>
+        <li><img width="200px" id="flower" src="flower.jpg" alt="" /></li>
+        <li>
+          <a
+            href="https://www.google.com/?zx=1771403795849&no_sw_cr=1"
+            id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // document.getElementById("owl").onclick = function () {
+    //   alert("owl clicked");
+    // };
+    //new to study type , timestamp, defaultprevented
+    //target, toElement ,srcElement , currentTarget,
+    // clientx, clientY , screenX , ScreenY
+    //  altkey , ctrlkey,shiftkey , keyCode
+
+    document.getElementById("owl").addEventListener("click", function (params) {
+      // other event types are "mousemove","keydown","pointerdown"
+      //   console.log(
+      //     `param.type tell that what kind of event happened so here happend:${params.type}`,
+      //   );
+
+      //   console.log(
+      //     "This is for after scrren open when that event is apper:" +
+      //       params.timeStamp,
+      //   );
+      //   console.log("Target:" + params.target);
+      //   console.log(params.clientX, params.clientY);
+
+      //   console.log("Mouse moved to:", param.toElement);
+      alert("owl clicked");
+    });
+
+    // Separate keyboard listener here we have to use different eventListener
+    document.addEventListener("keydown", function (params) {
+      //   console.log("Key pressed:", params.key);
+    });
+
+    // if we make false here then at first owl click will show then "clicked inside the ul" will show. this called "bubling the event" form downwards to upwards
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("clicked inside the ul");
+    //   },
+    //   false,
+    // );
+
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("owl clicked");
+    //   },
+    //   false,
+    // );
+
+    // but insted of false if we use true the it is called "event capturing" here it will go top to dottom
+
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("clicked inside the ul");
+    //   },
+    //   true,
+    // );
+
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("owl clicked");
+    //   },
+    //   true,
+    // );
+    document.getElementById("google").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault(); //This is for prevent Default behaviour
+        e.stopPropagation(); // This is for stop propagationf
+        console.log("Google clicked");
+      },
+      false,
+    );
+
+    // remove the image way1
+    document.querySelector("#images").addEventListener("click", function (e) {
+      //   console.log(e.target.parentNode);
+      console.log(e.target.tagName);
+      if (e.target.tagName == "IMG") {
+        console.log(e.target.id);
+        let remove = e.target.parentNode;
+        remove.remove();
+      }
+    });
+  </script>
+</html>
