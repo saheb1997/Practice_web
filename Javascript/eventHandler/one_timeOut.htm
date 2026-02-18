@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <div>
+      <h1>cahi with code</h1>
+      <button id="stop">stop</button>
+    </div>
+  </body>
+  <script>
+    const changeText = function () {
+      document.querySelector("h1").innerHTML =
+        "one of the best series of java script";
+    };
+    const changeMe = setTimeout(changeText, 2000);
+    document.querySelector("#stop").addEventListener("click", function () {
+      console.log("Stoped");
+
+      clearTimeout(changeMe);
+    });
+  </script>
+</html>
