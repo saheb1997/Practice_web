@@ -9,9 +9,15 @@ function App() {
   console.log(useState(15));
   
   // let counter = 15
+  // Use prev because React state updates are asynchronous and batched.
   const addValue = ()=>{
-    if(counter<20)
-      setCounter(counter+1)
+    if(counter<20){
+      setCounter(prev=>prev+1)
+      setCounter(prev=>prev+1)
+      setCounter(prev=>prev+1)
+      setCounter(prev=>prev+1)
+    }
+      
   }
 
   const removeValue =()=>{
