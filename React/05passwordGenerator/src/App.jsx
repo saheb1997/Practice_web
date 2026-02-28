@@ -24,7 +24,7 @@ function App() {
     setPassword(pass)
 
   },
-  [length,numberAllowed,charAllowed,setPassword])
+  [length,numberAllowed,charAllowed])
 
   const copyPasswordToClipboard = useCallback(()=>{
     passwordRef.current?.select()
